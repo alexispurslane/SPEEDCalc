@@ -53,6 +53,7 @@
 		D577D6781872442A008B9352 /* SPEEDCalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SPEEDCalcTests-Info.plist"; sourceTree = "<group>"; };
 		D577D67A1872442A008B9352 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D577D67C1872442A008B9352 /* SPEEDCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPEEDCalcTests.m; sourceTree = "<group>"; };
+		D577D686187247CE008B9352 /* DS-DIGI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGI.TTF"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 				D577D6631872442A008B9352 /* Main.storyboard */,
 				D577D6661872442A008B9352 /* SCViewController.h */,
 				D577D6671872442A008B9352 /* SCViewController.m */,
+				D577D686187247CE008B9352 /* DS-DIGI.TTF */,
 				D577D6691872442A008B9352 /* Images.xcassets */,
 				D577D6581872442A008B9352 /* Supporting Files */,
 			);

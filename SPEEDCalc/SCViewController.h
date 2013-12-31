@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCViewController : UIViewController
+@interface SCViewController : UIViewController {
+	NSString *firstNum;
+}
 
 @end
