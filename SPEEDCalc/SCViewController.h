@@ -10,6 +10,7 @@
 
 @interface SCViewController : UIViewController {
 	NSString *firstNum;
+	NSString *secondNum;
 }
 
 @end
