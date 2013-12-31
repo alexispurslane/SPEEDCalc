@@ -10,6 +10,20 @@
 @interface SCViewController (
 	
 )
+@property (weak, nonatomic) IBOutlet UIButton *b0;
+@property (weak, nonatomic) IBOutlet UIButton *b9;
+@property (weak, nonatomic) IBOutlet UIButton *b8;
+@property (weak, nonatomic) IBOutlet UIButton *b7;
+@property (weak, nonatomic) IBOutlet UIButton *b6;
+@property (weak, nonatomic) IBOutlet UIButton *b5;
+@property (weak, nonatomic) IBOutlet UIButton *b4;
+@property (weak, nonatomic) IBOutlet UIButton *b3;
+@property (weak, nonatomic) IBOutlet UIButton *b2;
+@property (weak, nonatomic) IBOutlet UIButton *b1;
+@property (weak, nonatomic) IBOutlet UIButton *divide;
+@property (weak, nonatomic) IBOutlet UIButton *multiply;
+@property (weak, nonatomic) IBOutlet UIButton *subtract;
+@property (weak, nonatomic) IBOutlet UIButton *add;
 @property (nonatomic) BOOL firstNumDone;
 @property (weak, nonatomic) IBOutlet UILabel *firstNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *operationLabel;
@@ -128,7 +142,7 @@ if ([_operationLabel.text isEqual: @"-"]) {
 	_firstNumDone = NO;
 	_operationLabel.text = @"";
 	secondNum = @"";
-	firstNum = @"";
+	firstNum = @"0000";
 	_firstNumLabel.text = firstNum;
 	_secondNumLabel.text = firstNum;
 }
@@ -173,6 +187,19 @@ if ([_operationLabel.text isEqual: @"-"]) {
 	// Do any additional setup after loading the view, typically from a nib.
 	firstNum = @"";
 	_firstNumDone = NO;
+	[_add setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_subtract setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_multiply setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_b0 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_b1 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_b2 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_b3 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_b4 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_b5 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_b6 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_b7 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_b8 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_b9 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning
