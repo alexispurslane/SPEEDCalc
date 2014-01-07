@@ -10,6 +10,9 @@
 @interface SCViewController (
 	
 )
+@property (weak, nonatomic) IBOutlet UIButton *save;
+@property (weak, nonatomic) IBOutlet UIButton *load;
+@property (weak, nonatomic) IBOutlet UIButton *results;
 @property (weak, nonatomic) IBOutlet UIButton *b0;
 @property (weak, nonatomic) IBOutlet UIButton *b9;
 @property (weak, nonatomic) IBOutlet UIButton *b8;
@@ -33,6 +36,22 @@
 @end
 
 @implementation SCViewController
+- (IBAction)buttonSave:(id)sender {
+	NSArray *paths = NSSearchPathForDirectoriesInDomains
+	(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+	
+		//make a file name to write the data to using the documents directory:
+    NSString *fileName = [NSString stringWithFormat:@"%@/%@",
+						  documentsDirectory, [NSString stringWithFormat:@"%@.dt", [NSDate date]]];
+		//create content - four lines of text
+    NSString *content = _sumLabel.text;
+		//save content to the documents directory
+    [content writeToFile:fileName
+			  atomically:NO
+				encoding:NSStringEncodingConversionAllowLossy
+				   error:nil];
+}
 - (IBAction)button0:(id)sender {
 	firstNum = [firstNum stringByAppendingString:@"0"];
 	if (!_firstNumDone) {
@@ -127,44 +146,44 @@
 - (IBAction)buttonEnter:(id)sender {
 	NSLog(@"%@", firstNum);
 if ([_operationLabel.text isEqual: @"-"]) {
-		int sum = [firstNum intValue] - [secondNum intValue];
-		_sumLabel.text = [NSString stringWithFormat:@"%i", sum];
+		signed long int sum = [secondNum intValue] - [firstNum intValue];
+		_sumLabel.text = [NSString stringWithFormat:@"%li", sum];
 	} else if ([_operationLabel.text isEqual: @"+"]) {
-		int sum = [firstNum intValue] + [secondNum intValue];
-		_sumLabel.text = [NSString stringWithFormat:@"%i", sum];
+		signed long int sum  = [secondNum intValue] + [firstNum intValue];
+		_sumLabel.text = [NSString stringWithFormat:@"%li", sum];
 	}else if ([_operationLabel.text isEqual: @"×"]) {
-		int sum = [firstNum intValue] * [secondNum intValue];
-		_sumLabel.text = [NSString stringWithFormat:@"%i", sum];
+		signed long int sum = [secondNum intValue] * [firstNum intValue];
+		_sumLabel.text = [NSString stringWithFormat:@"%li", sum];
 	}else if ([_operationLabel.text isEqual: @"÷"]) {
-		int sum = [firstNum intValue] / [secondNum intValue];
-		_sumLabel.text = [NSString stringWithFormat:@"%i", sum];
+		signed long int sum = [secondNum intValue] / [firstNum intValue];
+		_sumLabel.text = [NSString stringWithFormat:@"%li", sum];
 	}
 	_firstNumDone = NO;
 	_operationLabel.text = @"";
 	secondNum = @"";
-	firstNum = @"0000";
+	firstNum = @"";
 	_firstNumLabel.text = firstNum;
 	_secondNumLabel.text = firstNum;
 }
 - (IBAction)buttonClear:(id)sender {
 	firstNum = @"";
-	if (!_firstNumDone) {
-	    _firstNumLabel.text = firstNum;
-	} else {
-	    _secondNumLabel.text = firstNum;
-	}
+	_firstNumLabel.text = firstNum;
+	_secondNumLabel.text = firstNum;
+	_sumLabel.text = @"";
 }
 - (IBAction)buttonMultiply:(id)sender {
 	secondNum = firstNum;
 	firstNum = @"";
 	_firstNumDone = YES;
 	_operationLabel.text = @"×";
+	NSLog(@"M");
 }
 - (IBAction)buttonDivide:(id)sender {
 	secondNum = firstNum;
 	firstNum = @"";
 	_firstNumDone = YES;
 	_operationLabel.text = @"÷";
+	NSLog(@"D");
 	
 }
 - (IBAction)buttonAdd:(id)sender {
@@ -172,6 +191,7 @@ if ([_operationLabel.text isEqual: @"-"]) {
 	firstNum = @"";
 	_firstNumDone = YES;
 	_operationLabel.text = @"+";
+	NSLog(@"A");
 	
 }
 - (IBAction)buttonSubtract:(id)sender {
@@ -179,6 +199,11 @@ if ([_operationLabel.text isEqual: @"-"]) {
 	firstNum = @"";
 	_firstNumDone = YES;
 	_operationLabel.text = @"-";
+	NSLog(@"S");
+}
+- (IBAction)buttonResults:(id)sender {
+	firstNum = _sumLabel.text;
+	_firstNumLabel.text = firstNum;
 }
 
 - (void)viewDidLoad
@@ -188,8 +213,10 @@ if ([_operationLabel.text isEqual: @"-"]) {
 	firstNum = @"";
 	_firstNumDone = NO;
 	[_add setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_results setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png.png"] forState:UIControlStateHighlighted];
 	[_subtract setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png.png"] forState:UIControlStateHighlighted];
 	[_multiply setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_divide setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png.png"] forState:UIControlStateHighlighted];
 	[_b0 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
 	[_b1 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
 	[_b2 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
@@ -200,6 +227,26 @@ if ([_operationLabel.text isEqual: @"-"]) {
 	[_b7 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
 	[_b8 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
 	[_b9 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
+	_b0.adjustsImageWhenHighlighted = NO;
+	_b1.adjustsImageWhenHighlighted = NO;
+	_b2.adjustsImageWhenHighlighted = NO;
+	_b3.adjustsImageWhenHighlighted = NO;
+	_b4.adjustsImageWhenHighlighted = NO;
+	_b5.adjustsImageWhenHighlighted = NO;
+	_b6.adjustsImageWhenHighlighted = NO;
+	_b7.adjustsImageWhenHighlighted = NO;
+	_b8.adjustsImageWhenHighlighted = NO;
+	_b9.adjustsImageWhenHighlighted = NO;
+	_multiply.adjustsImageWhenHighlighted = NO;
+	_add.adjustsImageWhenHighlighted = NO;
+	_subtract.adjustsImageWhenHighlighted = NO;
+	_divide.adjustsImageWhenHighlighted = NO;
+	_results.adjustsImageWhenHighlighted = NO;
+	_load.adjustsImageWhenHighlighted = NO;
+	_save.adjustsImageWhenHighlighted = NO;
+	[_load setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png"] forState:UIControlStateHighlighted];
+	[_save setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png"] forState:UIControlStateHighlighted];
+	
 }
 
 - (void)didReceiveMemoryWarning

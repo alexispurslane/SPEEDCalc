@@ -21,10 +21,12 @@
 		D577D6731872442A008B9352 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D577D6551872442A008B9352 /* UIKit.framework */; };
 		D577D67B1872442A008B9352 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D577D6791872442A008B9352 /* InfoPlist.strings */; };
 		D577D67D1872442A008B9352 /* SPEEDCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D577D67C1872442A008B9352 /* SPEEDCalcTests.m */; };
+		D5D0AA06187B0F390054AA6E /* SCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D0AA05187B0F390054AA6E /* SCTableViewController.m */; };
 		D5FC8A5C1873740D00D99E3C /* buttonRing.png in Resources */ = {isa = PBXBuildFile; fileRef = D5FC8A5A1873740D00D99E3C /* buttonRing.png */; };
 		D5FC8A5D1873740D00D99E3C /* operatorRing.png in Resources */ = {isa = PBXBuildFile; fileRef = D5FC8A5B1873740D00D99E3C /* operatorRing.png */; };
 		D5FC8A5F1873783E00D99E3C /* operatorRingTouch.png in Resources */ = {isa = PBXBuildFile; fileRef = D5FC8A5E1873783E00D99E3C /* operatorRingTouch.png */; };
 		D5FC8A611873799400D99E3C /* buttonRingTouch.png in Resources */ = {isa = PBXBuildFile; fileRef = D5FC8A601873799400D99E3C /* buttonRingTouch.png */; };
+		D5FC8A651873848E00D99E3C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5FC8A641873848E00D99E3C /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +60,13 @@
 		D577D67A1872442A008B9352 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D577D67C1872442A008B9352 /* SPEEDCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPEEDCalcTests.m; sourceTree = "<group>"; };
 		D577D686187247CE008B9352 /* DS-DIGI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGI.TTF"; sourceTree = "<group>"; };
+		D5D0AA04187B0F390054AA6E /* SCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewController.h; sourceTree = "<group>"; };
+		D5D0AA05187B0F390054AA6E /* SCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewController.m; sourceTree = "<group>"; };
 		D5FC8A5A1873740D00D99E3C /* buttonRing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonRing.png; sourceTree = "<group>"; };
 		D5FC8A5B1873740D00D99E3C /* operatorRing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = operatorRing.png; sourceTree = "<group>"; };
 		D5FC8A5E1873783E00D99E3C /* operatorRingTouch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = operatorRingTouch.png; sourceTree = "<group>"; };
 		D5FC8A601873799400D99E3C /* buttonRingTouch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonRingTouch.png; sourceTree = "<group>"; };
+		D5FC8A641873848E00D99E3C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +129,8 @@
 				D577D6601872442A008B9352 /* SCAppDelegate.h */,
 				D577D6611872442A008B9352 /* SCAppDelegate.m */,
 				D577D6631872442A008B9352 /* Main.storyboard */,
+				D5D0AA04187B0F390054AA6E /* SCTableViewController.h */,
+				D5D0AA05187B0F390054AA6E /* SCTableViewController.m */,
 				D577D6661872442A008B9352 /* SCViewController.h */,
 				D577D6671872442A008B9352 /* SCViewController.m */,
 				D5FC8A601873799400D99E3C /* buttonRingTouch.png */,
@@ -140,6 +147,7 @@
 		D577D6581872442A008B9352 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D5FC8A641873848E00D99E3C /* icon.png */,
 				D577D6591872442A008B9352 /* SPEEDCalc-Info.plist */,
 				D577D65A1872442A008B9352 /* InfoPlist.strings */,
 				D577D65D1872442A008B9352 /* main.m */,
@@ -247,6 +255,7 @@
 				D5FC8A5D1873740D00D99E3C /* operatorRing.png in Resources */,
 				D5FC8A5C1873740D00D99E3C /* buttonRing.png in Resources */,
 				D577D65C1872442A008B9352 /* InfoPlist.strings in Resources */,
+				D5FC8A651873848E00D99E3C /* icon.png in Resources */,
 				D577D6651872442A008B9352 /* Main.storyboard in Resources */,
 				D5FC8A5F1873783E00D99E3C /* operatorRingTouch.png in Resources */,
 				D5FC8A611873799400D99E3C /* buttonRingTouch.png in Resources */,
@@ -271,6 +280,7 @@
 				D577D6621872442A008B9352 /* SCAppDelegate.m in Sources */,
 				D577D6681872442A008B9352 /* SCViewController.m in Sources */,
 				D577D65E1872442A008B9352 /* main.m in Sources */,
+				D5D0AA06187B0F390054AA6E /* SCTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +405,6 @@
 		D577D6811872442A008B9352 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SPEEDCalc/SPEEDCalc-Prefix.pch";
@@ -408,7 +417,6 @@
 		D577D6821872442A008B9352 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SPEEDCalc/SPEEDCalc-Prefix.pch";
