@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51CFA92187CBAB500746107 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D51CFA91187CBAB500746107 /* README.md */; };
 		D577D6521872442A008B9352 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D577D65118724429008B9352 /* Foundation.framework */; };
 		D577D6541872442A008B9352 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D577D6531872442A008B9352 /* CoreGraphics.framework */; };
 		D577D6561872442A008B9352 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D577D6551872442A008B9352 /* UIKit.framework */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D51CFA91187CBAB500746107 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		D577D64E18724429008B9352 /* SPEEDCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPEEDCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D577D65118724429008B9352 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D577D6531872442A008B9352 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +135,7 @@
 				D5D0AA05187B0F390054AA6E /* SCTableViewController.m */,
 				D577D6661872442A008B9352 /* SCViewController.h */,
 				D577D6671872442A008B9352 /* SCViewController.m */,
+				D51CFA91187CBAB500746107 /* README.md */,
 				D5FC8A601873799400D99E3C /* buttonRingTouch.png */,
 				D5FC8A5E1873783E00D99E3C /* operatorRingTouch.png */,
 				D5FC8A5A1873740D00D99E3C /* buttonRing.png */,
@@ -257,6 +260,7 @@
 				D577D65C1872442A008B9352 /* InfoPlist.strings in Resources */,
 				D5FC8A651873848E00D99E3C /* icon.png in Resources */,
 				D577D6651872442A008B9352 /* Main.storyboard in Resources */,
+				D51CFA92187CBAB500746107 /* README.md in Resources */,
 				D5FC8A5F1873783E00D99E3C /* operatorRingTouch.png in Resources */,
 				D5FC8A611873799400D99E3C /* buttonRingTouch.png in Resources */,
 			);
