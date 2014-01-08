@@ -32,10 +32,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *operationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *secondNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *sumLabel;
+@property (weak, nonatomic) IBOutlet UIButton *negate;
 
 @end
 
 @implementation SCViewController
+- (IBAction)buttonNegate:(id)sender {
+	firstNum = [@"-" stringByAppendingString:firstNum];
+	if (!_firstNumDone) {
+	    _firstNumLabel.text = firstNum;
+	} else {
+	    _secondNumLabel.text = firstNum;
+	}
+}
 - (IBAction)buttonSave:(id)sender {
 	NSArray *paths = NSSearchPathForDirectoriesInDomains
 	(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -145,18 +154,15 @@
 }
 - (IBAction)buttonEnter:(id)sender {
 	NSLog(@"%@", firstNum);
-if ([_operationLabel.text isEqual: @"-"]) {
-		signed long int sum = [secondNum intValue] - [firstNum intValue];
-		_sumLabel.text = [NSString stringWithFormat:@"%li", sum];
+	signed int long sum = 0;
+	if ([_operationLabel.text isEqual: @"-"]) {
+		sum = [secondNum intValue] - [firstNum intValue];
 	} else if ([_operationLabel.text isEqual: @"+"]) {
-		signed long int sum  = [secondNum intValue] + [firstNum intValue];
-		_sumLabel.text = [NSString stringWithFormat:@"%li", sum];
+		sum  = [secondNum intValue] + [firstNum intValue];
 	}else if ([_operationLabel.text isEqual: @"×"]) {
-		signed long int sum = [secondNum intValue] * [firstNum intValue];
-		_sumLabel.text = [NSString stringWithFormat:@"%li", sum];
+		sum = [secondNum intValue] * [firstNum intValue];
 	}else if ([_operationLabel.text isEqual: @"÷"]) {
-		signed long int sum = [secondNum intValue] / [firstNum intValue];
-		_sumLabel.text = [NSString stringWithFormat:@"%li", sum];
+		sum = [secondNum intValue] / [firstNum intValue];
 	}
 	_firstNumDone = NO;
 	_operationLabel.text = @"";
@@ -164,6 +170,8 @@ if ([_operationLabel.text isEqual: @"-"]) {
 	firstNum = @"";
 	_firstNumLabel.text = firstNum;
 	_secondNumLabel.text = firstNum;
+	firstNum = [NSString stringWithFormat:@"%ld", sum];
+	_firstNumLabel.text = firstNum;
 }
 - (IBAction)buttonClear:(id)sender {
 	firstNum = @"";
@@ -227,6 +235,7 @@ if ([_operationLabel.text isEqual: @"-"]) {
 	[_b7 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
 	[_b8 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
 	[_b9 setBackgroundImage:[UIImage imageNamed:@"buttonRingTouch.png.png"] forState:UIControlStateHighlighted];
+	[_negate setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png.png"] forState:UIControlStateHighlighted];
 	_b0.adjustsImageWhenHighlighted = NO;
 	_b1.adjustsImageWhenHighlighted = NO;
 	_b2.adjustsImageWhenHighlighted = NO;
@@ -244,6 +253,7 @@ if ([_operationLabel.text isEqual: @"-"]) {
 	_results.adjustsImageWhenHighlighted = NO;
 	_load.adjustsImageWhenHighlighted = NO;
 	_save.adjustsImageWhenHighlighted = NO;
+	_negate.adjustsImageWhenHighlighted = NO;
 	[_load setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png"] forState:UIControlStateHighlighted];
 	[_save setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png"] forState:UIControlStateHighlighted];
 	
