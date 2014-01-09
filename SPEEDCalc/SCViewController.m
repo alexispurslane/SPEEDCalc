@@ -7,9 +7,15 @@
 //
 
 #import "SCViewController.h"
+#import <AudioToolbox/AudioServices.h>
 @interface SCViewController (
 	
 )
+@property (weak, nonatomic) IBOutlet UILabel *memHud;
+@property (weak, nonatomic) IBOutlet UIButton *mr;
+@property (weak, nonatomic) IBOutlet UIButton *mm;
+@property (weak, nonatomic) IBOutlet UIButton *mp;
+@property (weak, nonatomic) IBOutlet UIButton *mc;
 @property (weak, nonatomic) IBOutlet UIButton *save;
 @property (weak, nonatomic) IBOutlet UIButton *load;
 @property (weak, nonatomic) IBOutlet UIButton *results;
@@ -33,10 +39,32 @@
 @property (weak, nonatomic) IBOutlet UILabel *secondNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *sumLabel;
 @property (weak, nonatomic) IBOutlet UIButton *negate;
+@property (weak, nonatomic) IBOutlet UIButton *enter;
+@property (weak, nonatomic) IBOutlet UIButton *clear;
+@property (nonatomic) signed long int M;
 
 @end
 
 @implementation SCViewController
+- (IBAction)buttonMemorySubtarct:(id)sender {
+	_M -= [firstNum integerValue];
+}
+- (IBAction)buttonMemoryAdd:(id)sender {
+	_M += [firstNum integerValue];
+}
+- (IBAction)buttonMemoryClear:(id)sender {
+	_M = 0;
+}
+- (IBAction)buttonMemoryRecall:(id)sender {
+	firstNum = [NSString stringWithFormat:@"%ld", _M];
+	if (!_firstNumDone) {
+	    _firstNumLabel.text = firstNum;
+	} else {
+	    _secondNumLabel.text = firstNum;
+	}
+	NSLog(@"MR %ld", _M);
+}
+
 - (IBAction)buttonNegate:(id)sender {
 	firstNum = [@"-" stringByAppendingString:firstNum];
 	if (!_firstNumDone) {
@@ -163,6 +191,8 @@
 		sum = [secondNum intValue] * [firstNum intValue];
 	}else if ([_operationLabel.text isEqual: @"÷"]) {
 		sum = [secondNum intValue] / [firstNum intValue];
+	} else {
+		sum = [secondNum integerValue];
 	}
 	_firstNumDone = NO;
 	_operationLabel.text = @"";
@@ -220,6 +250,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	firstNum = @"";
 	_firstNumDone = NO;
+	_M = 0;
 	[_add setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png.png"] forState:UIControlStateHighlighted];
 	[_results setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png.png"] forState:UIControlStateHighlighted];
 	[_subtract setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png.png"] forState:UIControlStateHighlighted];
@@ -253,9 +284,21 @@
 	_results.adjustsImageWhenHighlighted = NO;
 	_load.adjustsImageWhenHighlighted = NO;
 	_save.adjustsImageWhenHighlighted = NO;
+	_clear.adjustsImageWhenHighlighted = NO;
+	_enter.adjustsImageWhenHighlighted = NO;
 	_negate.adjustsImageWhenHighlighted = NO;
+	_mm.adjustsImageWhenHighlighted = NO;
+	_mc.adjustsImageWhenHighlighted = NO;
+	_mp.adjustsImageWhenHighlighted = NO;
+	_mr.adjustsImageWhenHighlighted = NO;
 	[_load setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png"] forState:UIControlStateHighlighted];
 	[_save setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png"] forState:UIControlStateHighlighted];
+	[_enter setBackgroundImage:[UIImage imageNamed:@"enterRingTouch.png"] forState:UIControlStateHighlighted];
+	[_clear setBackgroundImage:[UIImage imageNamed:@"clearRingTouch.png"] forState:UIControlStateHighlighted];
+	[_mm setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png"] forState:UIControlStateHighlighted];
+	[_mc setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png"] forState:UIControlStateHighlighted];
+	[_mp setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png"] forState:UIControlStateHighlighted];
+	[_mr setBackgroundImage:[UIImage imageNamed:@"operatorRingTouch.png"] forState:UIControlStateHighlighted];
 	
 }
 

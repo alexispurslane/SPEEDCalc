@@ -124,11 +124,11 @@
                                     <action selector="button9:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vf0-DA-NrI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plb-Oi-8os">
-                                <rect key="frame" x="205" y="449" width="97" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plb-Oi-8os">
+                                <rect key="frame" x="205" y="438" width="65" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="=">
+                                <state key="normal" title="=" backgroundImage="enterRing.png">
                                     <color key="titleColor" red="0.0" green="1" blue="0.073474537529999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -136,11 +136,11 @@
                                     <action selector="buttonEnter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="J5f-Fa-XeC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSN-CC-457">
-                                <rect key="frame" x="22" y="449" width="102" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSN-CC-457">
+                                <rect key="frame" x="59" y="438" width="65" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="C">
+                                <state key="normal" title="C" backgroundImage="clearRing.png">
                                     <color key="titleColor" red="1" green="0.02169921121" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -173,7 +173,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="×" backgroundImage="operatorRing.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1100055902" green="0.6311514198" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -185,7 +185,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="÷" backgroundImage="operatorRing.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1100055902" green="0.6311514198" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -197,7 +197,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="+" backgroundImage="operatorRing.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1100055902" green="0.6311514198" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -209,7 +209,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="-" backgroundImage="operatorRing.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1100055902" green="0.6311514198" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -231,23 +231,78 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOp-FH-wzB">
-                                <rect key="frame" x="5" y="85" width="315" height="32"/>
+                                <rect key="frame" x="59" y="85" width="261" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.02169921121" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZl-uZ-mDr">
-                                <rect key="frame" x="138" y="173" width="59" height="44"/>
+                                <rect key="frame" x="31" y="177" width="59" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="±" backgroundImage="operatorRing.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1100055902" green="0.6311514198" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonNegate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bCb-Fb-3NV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htk-a5-XPf">
+                                <rect key="frame" x="98" y="177" width="65" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="MC" backgroundImage="operatorRing.png">
+                                    <color key="titleColor" red="0.1100055902" green="0.6311514198" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonMemoryClear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="osT-lS-zh2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFQ-jy-nJZ">
+                                <rect key="frame" x="168" y="177" width="59" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="M+" backgroundImage="operatorRing.png">
+                                    <color key="titleColor" red="0.1100055902" green="0.6311514198" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonMemoryAdd:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IhA-Jf-oHL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlm-cy-Esh">
+                                <rect key="frame" x="241" y="177" width="59" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="M-" backgroundImage="operatorRing.png">
+                                    <color key="titleColor" red="0.1100055902" green="0.6311514198" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonMemorySubtarct:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vn5-Y6-opb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAE-OK-ZIh">
+                                <rect key="frame" x="132" y="510" width="65" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="MR" backgroundImage="operatorRing.png">
+                                    <color key="titleColor" red="0.11000559020861578" green="0.63115141977026701" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonMemoryRecall:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8BQ-Ly-ABr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcF-n2-Dci">
+                                <rect key="frame" x="0.0" y="85" width="51" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1100055902" green="0.6311514198" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99444444444444446" green="0.98888888888888893" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.9647059440612793" green="0.84705889225006104" blue="0.50196081399917603" alpha="1" colorSpace="deviceRGB"/>
@@ -264,8 +319,15 @@
                         <outlet property="b7" destination="MpY-Ie-OfN" id="5l4-Pg-iuk"/>
                         <outlet property="b8" destination="MpY-Ie-OfN" id="meJ-H0-Eah"/>
                         <outlet property="b9" destination="HbI-mt-VGg" id="8VE-Uw-BNr"/>
+                        <outlet property="clear" destination="XSN-CC-457" id="EN4-a8-nRl"/>
                         <outlet property="divide" destination="UyG-tX-RwZ" id="2aS-md-df5"/>
+                        <outlet property="enter" destination="Plb-Oi-8os" id="mLS-Vq-owb"/>
                         <outlet property="firstNumLabel" destination="eaE-eZ-9aa" id="PAo-Rl-id1"/>
+                        <outlet property="mc" destination="htk-a5-XPf" id="a3c-5d-pEQ"/>
+                        <outlet property="memHud" destination="zcF-n2-Dci" id="Ozh-Sm-agF"/>
+                        <outlet property="mm" destination="Jlm-cy-Esh" id="N9Z-pf-2aA"/>
+                        <outlet property="mp" destination="NFQ-jy-nJZ" id="sFW-tT-1NI"/>
+                        <outlet property="mr" destination="oAE-OK-ZIh" id="BeL-F4-P1e"/>
                         <outlet property="multiply" destination="M6r-gD-B01" id="zm1-JF-fnZ"/>
                         <outlet property="negate" destination="TZl-uZ-mDr" id="MvC-Df-dRy"/>
                         <outlet property="operationLabel" destination="cdX-7t-Glf" id="7Zz-WM-Z4u"/>
@@ -281,6 +343,8 @@
     </scenes>
     <resources>
         <image name="buttonRing.png" width="65" height="65"/>
+        <image name="clearRing.png" width="65" height="65"/>
+        <image name="enterRing.png" width="65" height="65"/>
         <image name="operatorRing.png" width="65" height="65"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

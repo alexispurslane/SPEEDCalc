@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D50D5A1E187DA62300A0BD12 /* clearRing.png in Resources */ = {isa = PBXBuildFile; fileRef = D50D5A1C187DA62300A0BD12 /* clearRing.png */; };
+		D50D5A1F187DA62300A0BD12 /* clearRingTouch.png in Resources */ = {isa = PBXBuildFile; fileRef = D50D5A1D187DA62300A0BD12 /* clearRingTouch.png */; };
 		D51CFA92187CBAB500746107 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D51CFA91187CBAB500746107 /* README.md */; };
+		D51CFA99187CD5BB00746107 /* enterRing.png in Resources */ = {isa = PBXBuildFile; fileRef = D51CFA97187CD5BB00746107 /* enterRing.png */; };
+		D51CFA9A187CD5BB00746107 /* enterRingTouch.png in Resources */ = {isa = PBXBuildFile; fileRef = D51CFA98187CD5BB00746107 /* enterRingTouch.png */; };
 		D577D6521872442A008B9352 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D577D65118724429008B9352 /* Foundation.framework */; };
 		D577D6541872442A008B9352 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D577D6531872442A008B9352 /* CoreGraphics.framework */; };
 		D577D6561872442A008B9352 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D577D6551872442A008B9352 /* UIKit.framework */; };
@@ -41,7 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D50D5A1C187DA62300A0BD12 /* clearRing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clearRing.png; sourceTree = "<group>"; };
+		D50D5A1D187DA62300A0BD12 /* clearRingTouch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clearRingTouch.png; sourceTree = "<group>"; };
 		D51CFA91187CBAB500746107 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D51CFA97187CD5BB00746107 /* enterRing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enterRing.png; sourceTree = "<group>"; };
+		D51CFA98187CD5BB00746107 /* enterRingTouch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enterRingTouch.png; sourceTree = "<group>"; };
 		D577D64E18724429008B9352 /* SPEEDCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPEEDCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D577D65118724429008B9352 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D577D6531872442A008B9352 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -131,9 +139,13 @@
 				D577D6601872442A008B9352 /* SCAppDelegate.h */,
 				D577D6611872442A008B9352 /* SCAppDelegate.m */,
 				D577D6631872442A008B9352 /* Main.storyboard */,
+				D50D5A1C187DA62300A0BD12 /* clearRing.png */,
+				D50D5A1D187DA62300A0BD12 /* clearRingTouch.png */,
 				D5D0AA04187B0F390054AA6E /* SCTableViewController.h */,
 				D5D0AA05187B0F390054AA6E /* SCTableViewController.m */,
 				D577D6661872442A008B9352 /* SCViewController.h */,
+				D51CFA97187CD5BB00746107 /* enterRing.png */,
+				D51CFA98187CD5BB00746107 /* enterRingTouch.png */,
 				D577D6671872442A008B9352 /* SCViewController.m */,
 				D51CFA91187CBAB500746107 /* README.md */,
 				D5FC8A601873799400D99E3C /* buttonRingTouch.png */,
@@ -255,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D577D66A1872442A008B9352 /* Images.xcassets in Resources */,
+				D51CFA9A187CD5BB00746107 /* enterRingTouch.png in Resources */,
 				D5FC8A5D1873740D00D99E3C /* operatorRing.png in Resources */,
+				D51CFA99187CD5BB00746107 /* enterRing.png in Resources */,
+				D50D5A1F187DA62300A0BD12 /* clearRingTouch.png in Resources */,
 				D5FC8A5C1873740D00D99E3C /* buttonRing.png in Resources */,
 				D577D65C1872442A008B9352 /* InfoPlist.strings in Resources */,
 				D5FC8A651873848E00D99E3C /* icon.png in Resources */,
@@ -263,6 +278,7 @@
 				D51CFA92187CBAB500746107 /* README.md in Resources */,
 				D5FC8A5F1873783E00D99E3C /* operatorRingTouch.png in Resources */,
 				D5FC8A611873799400D99E3C /* buttonRingTouch.png in Resources */,
+				D50D5A1E187DA62300A0BD12 /* clearRing.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
